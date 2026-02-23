@@ -3,202 +3,303 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kopi Senja</title>
+  <title>Kopi Senja | Warm & Cozy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            poppins: ['Poppins', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
           },
           colors: {
-            coffee: {
-              50: '#fef7ed',
-              100: '#fdebd3',
-              500: '#92400e',
-              700: '#78350f',
-            }
+            warm: {
+              50: '#fafaf9',  /* Ivory */
+              100: '#f5f5f4',
+              200: '#e7e5e4',
+              900: '#1c1917', /* Dark Stone */
+            },
+            accent: {
+              500: '#8b5e34', /* Coffee Brown */
+              600: '#78350f',
+              light: '#d4b996',
+            },
+            sage: '#6b705c'
           }
         }
       }
     }
   </script>
+  <style>
+    .glass-nav {
+      background: rgba(250, 250, 249, 0.8);
+      backdrop-filter: blur(10px);
+    }
+    .menu-card:hover .menu-img {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
-<body class="font-poppins bg-gray-950 text-gray-100">
+<body class="font-sans bg-warm-50 text-warm-900">
 
-<header class="fixed top-0 w-full z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between bg-black/40 backdrop-blur rounded-b-2xl">
-    <h1 class="text-xl font-bold text-coffee-100">Kopi Senja</h1>
-    <nav class="hidden md:flex gap-10 text-sm font-medium">
-      <a href="#hero" class="hover:text-coffee-100">Home</a>
-      <a href="#story" class="hover:text-coffee-100">Story</a>
-      <a href="#special" class="hover:text-coffee-100">Special</a>
-      <a href="#pricing" class="hover:text-coffee-100">Harga</a>
-      <a href="#contact" class="hover:text-coffee-100">Kontak</a>
+<header class="fixed top-0 w-full z-50 px-4 py-4">
+  <div class="max-w-6xl mx-auto px-8 py-4 flex items-center justify-between glass-nav rounded-2xl shadow-sm border border-warm-200/50">
+    <h1 class="text-2xl font-extrabold font-serif text-accent-500">Kopi Senja</h1>
+    <nav class="hidden md:flex gap-8 text-sm font-semibold text-warm-900/70">
+      <a href="#hero" class="hover:text-accent-500 transition">Home</a>
+      <a href="#special" class="hover:text-accent-500 transition">Menu</a>
+      <a href="#about" class="hover:text-accent-500 transition">Story</a>
+      <a href="#promo" class="hover:text-accent-500 transition">Promo</a>
+      <a href="#follow" class="hover:text-accent-500 transition">Follow us</a>
     </nav>
   </div>
 </header>
 
-<section id="hero" class="relative min-h-screen flex items-center">
-  <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="absolute inset-0 w-full h-full object-cover" />
-  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-    <div>
-      <p class="text-coffee-100 tracking-widest uppercase text-sm">Premium Coffee Experience</p>
-      <h2 class="mt-4 text-5xl md:text-6xl font-extrabold leading-tight">
-        Rasa Kopi,<br> Cerita Senja
-      </h2>
-      <p class="mt-6 text-gray-300 max-w-xl">
-        Kopi Senja bukan sekadar minuman, tapi pengalaman. Setiap tegukan membawa cerita, aroma, dan suasana yang berbeda.
-      </p>
-      <div class="mt-8 flex gap-4">
-        <a href="#special" class="px-7 py-3 rounded-full bg-coffee-500 hover:bg-coffee-700 text-white font-semibold transition">Explore Menu</a>
-        <a href="#contact" class="px-7 py-3 rounded-full border border-white/40 hover:bg-white/10 transition">Book Table</a>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-2 gap-6">
-      <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
-        <h3 class="text-3xl font-bold text-coffee-100">120+</h3>
-        <p class="text-sm text-gray-300">Menu Variasi</p>
-      </div>
-      <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
-        <h3 class="text-3xl font-bold text-coffee-100">15+</h3>
-        <p class="text-sm text-gray-300">Barista Profesional</p>
-      </div>
-      <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
-        <h3 class="text-3xl font-bold text-coffee-100">10K+</h3>
-        <p class="text-sm text-gray-300">Pelanggan</p>
-      </div>
-      <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
-        <h3 class="text-3xl font-bold text-coffee-100">24/7</h3>
-        <p class="text-sm text-gray-300">Open Lounge</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="story" class="py-24 bg-gray-900">
-  <div class="max-w-6xl mx-auto px-6">
-    <h3 class="text-4xl font-bold text-center">Perjalanan Kopi Senja</h3>
-    <div class="mt-16 space-y-12">
-      <div class="flex flex-col md:flex-row gap-8 items-center">
-        <div class="w-12 h-12 rounded-full bg-coffee-500 flex items-center justify-center font-bold">1</div>
-        <div class="bg-gray-800 p-6 rounded-2xl flex-1">
-          <h4 class="text-xl font-semibold">Pemilihan Biji Kopi</h4>
-          <p class="mt-2 text-gray-400">Kami memilih biji kopi terbaik dari petani lokal Nusantara.</p>
-        </div>
-      </div>
-      <div class="flex flex-col md:flex-row gap-8 items-center">
-        <div class="w-12 h-12 rounded-full bg-coffee-500 flex items-center justify-center font-bold">2</div>
-        <div class="bg-gray-800 p-6 rounded-2xl flex-1">
-          <h4 class="text-xl font-semibold">Proses Roasting</h4>
-          <p class="mt-2 text-gray-400">Roasting dilakukan dengan teknik khusus untuk menjaga aroma dan rasa.</p>
-        </div>
-      </div>
-      <div class="flex flex-col md:flex-row gap-8 items-center">
-        <div class="w-12 h-12 rounded-full bg-coffee-500 flex items-center justify-center font-bold">3</div>
-        <div class="bg-gray-800 p-6 rounded-2xl flex-1">
-          <h4 class="text-xl font-semibold">Penyajian Premium</h4>
-          <p class="mt-2 text-gray-400">Setiap kopi disajikan oleh barista profesional dengan standar tinggi.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="special" class="py-24 bg-gray-950">
-  <div class="max-w-7xl mx-auto px-6">
-    <h3 class="text-4xl font-bold">Signature Menu</h3>
-    <p class="mt-3 text-gray-400">Menu eksklusif favorit pelanggan</p>
-
-    <div class="mt-12 flex gap-6 overflow-x-auto pb-6">
-      <div class="min-w-[260px] bg-gray-900 rounded-2xl p-6 hover:scale-105 transition">
-        <h4 class="text-lg font-semibold">Senja Latte</h4>
-        <p class="mt-2 text-gray-400 text-sm">Perpaduan espresso dan susu creamy.</p>
-      </div>
-      <div class="min-w-[260px] bg-gray-900 rounded-2xl p-6 hover:scale-105 transition">
-        <h4 class="text-lg font-semibold">Caramel Cold Brew</h4>
-        <p class="mt-2 text-gray-400 text-sm">Segar dengan sentuhan karamel.</p>
-      </div>
-      <div class="min-w-[260px] bg-gray-900 rounded-2xl p-6 hover:scale-105 transition">
-        <h4 class="text-lg font-semibold">Mocha Senja</h4>
-        <p class="mt-2 text-gray-400 text-sm">Coklat premium dengan espresso.</p>
-      </div>
-      <div class="min-w-[260px] bg-gray-900 rounded-2xl p-6 hover:scale-105 transition">
-        <h4 class="text-lg font-semibold">Espresso Classic</h4>
-        <p class="mt-2 text-gray-400 text-sm">Rasa kopi autentik dan kuat.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="pricing" class="py-24 bg-gray-900">
-  <div class="max-w-7xl mx-auto px-6">
-    <h3 class="text-4xl font-bold text-center">Paket Favorit</h3>
-
-    <div class="mt-14 grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-800 rounded-3xl p-8 border border-gray-700">
-        <h4 class="text-xl font-semibold">Basic</h4>
-        <p class="mt-4 text-4xl font-bold text-coffee-100">25K</p>
-        <ul class="mt-6 space-y-2 text-gray-400 text-sm">
-          <li>• 1 minuman kopi</li>
-          <li>• Free WiFi</li>
-          <li>• Cozy seat</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-b from-coffee-500 to-coffee-700 rounded-3xl p-8 text-white scale-105">
-        <h4 class="text-xl font-semibold">Premium</h4>
-        <p class="mt-4 text-4xl font-bold">50K</p>
-        <ul class="mt-6 space-y-2 text-white/90 text-sm">
-          <li>• 2 minuman kopi</li>
-          <li>• Dessert</li>
-          <li>• VIP seat</li>
-        </ul>
-      </div>
-      <div class="bg-gray-800 rounded-3xl p-8 border border-gray-700">
-        <h4 class="text-xl font-semibold">Exclusive</h4>
-        <p class="mt-4 text-4xl font-bold text-coffee-100">90K</p>
-        <ul class="mt-6 space-y-2 text-gray-400 text-sm">
-          <li>• 3 minuman kopi</li>
-          <li>• Dessert premium</li>
-          <li>• Private table</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="py-24 bg-gray-950">
+<section id="hero" class="relative min-h-screen flex items-center pt-20">
   <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-    <div>
-      <h3 class="text-4xl font-bold">Kunjungi Kopi Senja</h3>
-      <p class="mt-4 text-gray-400">Reservasi meja atau hubungi kami untuk event dan kerja sama.</p>
-      <div class="mt-8 space-y-3 text-gray-300">
-        <p>Jalan Kopi No. 21, Indonesia</p>
-        <p>hello@kopisenja.com</p>
-        <p>+62 812-xxxx-xxxx</p>
+    <div class="z-10">
+      <span class="inline-block px-4 py-1 rounded-full bg-accent-light/20 text-accent-600 text-xs font-bold tracking-widest uppercase mb-4">Slow Coffee, Good Vibes</span>
+      <h2 class="text-6xl md:text-7xl font-serif font-bold leading-tight text-warm-900">
+        Menemukan <br><span class="text-accent-500 italic">Kehangatan</span> di Setiap Cangkir.
+      </h2>
+      <p class="mt-6 text-lg text-warm-900/60 max-w-lg leading-relaxed">
+        Ruang tenang untuk kamu yang ingin melepas penat. Kami menyajikan biji kopi pilihan dengan suasana rumah yang hangat.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#special" class="px-8 py-4 rounded-xl bg-accent-500 text-white font-bold shadow-lg shadow-accent-500/30 hover:-translate-y-1 transition-all">Lihat Signature Menu</a>
+        <a href="#story" class="px-8 py-4 rounded-xl border-2 border-warm-200 font-bold hover:bg-warm-100 transition-all">Cerita Kami</a>
       </div>
     </div>
-    <div class="bg-gray-900 p-8 rounded-3xl border border-gray-800">
-      <h4 class="text-xl font-semibold mb-6">Send Message</h4>
-      <div class="space-y-4">
-        <input type="text" placeholder="Nama" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-coffee-500" />
-        <input type="email" placeholder="Email" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-coffee-500" />
-        <textarea rows="4" placeholder="Pesan" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-coffee-500"></textarea>
-        <button class="w-full bg-coffee-500 hover:bg-coffee-700 text-white font-semibold py-3 rounded-xl transition">Kirim</button>
+    
+    <div class="relative">
+      <div class="absolute -top-10 -left-10 w-64 h-64 bg-accent-light/20 rounded-full blur-3xl"></div>
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" class="rounded-[2rem] shadow-2xl relative z-10 w-full h-[500px] object-cover" alt="Coffee Interior" />
+      <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block border border-warm-100">
+        <p class="text-accent-500 font-bold text-2xl">4.9/5.0</p>
+        <p class="text-xs text-warm-900/50">Rating dari 2,000+ Pelanggan</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="py-10 bg-black text-center text-gray-500 text-sm">
-  © 2026 Kopi Senja. All rights reserved.
+<section id="special" class="py-32 bg-warm-100">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+      <div>
+        <h3 class="text-4xl font-serif font-bold">Signature Menu</h3>
+        <p class="mt-2 text-warm-900/50">Racikan khusus sang Barista untuk harimu.</p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="group bg-white rounded-[2.5rem] p-4 shadow-sm hover:shadow-2xl transition-all duration-500 menu-card border border-warm-200/50">
+        <div class="overflow-hidden rounded-[2rem] h-52 mb-6">
+          <img src="https://plus.unsplash.com/premium_photo-1671559020932-964867217bc3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover menu-img transition-transform duration-500" />
+        </div>
+        <div class="px-2 pb-4">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-xl font-bold">Senja Latte</h4>
+            <span class="text-accent-500 font-bold text-lg">28K</span>
+          </div>
+          <p class="text-sm text-warm-900/50 mb-6 leading-relaxed">Signature latte dengan gula aren organik dan foam yang sangat lembut.</p>
+          <button class="w-full py-3 rounded-2xl bg-warm-50 group-hover:bg-accent-500 group-hover:text-white transition-colors font-semibold text-sm">Tambah ke Pesanan</button>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-[2.5rem] p-4 shadow-sm hover:shadow-2xl transition-all duration-500 menu-card border border-warm-200/50">
+        <div class="overflow-hidden rounded-[2rem] h-52 mb-6">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735" class="w-full h-full object-cover menu-img transition-transform duration-500" />
+        </div>
+        <div class="px-2 pb-4">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-xl font-bold">Cloudy Mocha</h4>
+            <span class="text-accent-500 font-bold text-lg">32K</span>
+          </div>
+          <p class="text-sm text-warm-900/50 mb-6 leading-relaxed">Coklat Belgia dipadu dengan espresso robusta dan whipped cream.</p>
+          <button class="w-full py-3 rounded-2xl bg-warm-50 group-hover:bg-accent-500 group-hover:text-white transition-colors font-semibold text-sm">Tambah ke Pesanan</button>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-[2.5rem] p-4 shadow-sm hover:shadow-2xl transition-all duration-500 menu-card border border-warm-200/50">
+        <div class="overflow-hidden rounded-[2rem] h-52 mb-6">
+          <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c" class="w-full h-full object-cover menu-img transition-transform duration-500" />
+        </div>
+        <div class="px-2 pb-4">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-xl font-bold">Honey Brew</h4>
+            <span class="text-accent-500 font-bold text-lg">30K</span>
+          </div>
+          <p class="text-sm text-warm-900/50 mb-6 leading-relaxed">Cold brew yang difermentasi 12 jam dengan tambahan madu hutan.</p>
+          <button class="w-full py-3 rounded-2xl bg-warm-50 group-hover:bg-accent-500 group-hover:text-white transition-colors font-semibold text-sm">Tambah ke Pesanan</button>
+        </div>
+      </div>
+
+      <div class="group bg-white rounded-[2.5rem] p-4 shadow-sm hover:shadow-2xl transition-all duration-500 menu-card border border-warm-200/50">
+        <div class="overflow-hidden rounded-[2rem] h-52 mb-6">
+          <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336" class="w-full h-full object-cover menu-img transition-transform duration-500" />
+        </div>
+        <div class="px-2 pb-4">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-xl font-bold">Nutty Frappe</h4>
+            <span class="text-accent-500 font-bold text-lg">35K</span>
+          </div>
+          <p class="text-sm text-warm-900/50 mb-6 leading-relaxed">Es kopi blender dengan rasa kacang hazelnut dan taburan almond.</p>
+          <button class="w-full py-3 rounded-2xl bg-warm-50 group-hover:bg-accent-500 group-hover:text-white transition-colors font-semibold text-sm">Tambah ke Pesanan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-32 bg-warm-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-20 items-center">
+      
+      <div class="relative">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" class="rounded-2xl shadow-lg mt-8" alt="Cafe Interior" />
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31" class="rounded-2xl shadow-lg" alt="Coffee Pouring" />
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-accent-500 text-white p-8 rounded-3xl shadow-xl hidden md:block">
+          <p class="text-4xl font-serif font-bold italic">8+</p>
+          <p class="text-sm opacity-80 uppercase tracking-widest font-semibold">Tahun Pengalaman</p>
+        </div>
+      </div>
+
+      <div>
+        <span class="text-accent-500 font-bold tracking-widest uppercase text-sm italic">Warisan di Setiap Cangkir</span>
+        <h3 class="mt-4 text-4xl md:text-5xl font-serif font-bold text-warm-900 leading-tight">
+          Lebih Dari Sekadar Tempat <br><span class="text-accent-light underline decoration-accent-500">Minum Kopi.</span>
+        </h3>
+        <p class="mt-8 text-lg text-warm-900/60 leading-relaxed">
+          Kopi Senja bermula dari sebuah garasi kecil di sudut kota. Kami percaya bahwa kopi adalah media komunikasi paling jujur. Di sini, kami tidak hanya menjual minuman, tapi menyediakan ruang bagi ide-ide besar untuk tumbuh dan obrolan kecil untuk menjadi bermakna.
+        </p>
+        
+        <div class="mt-10 grid grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-bold text-warm-900">Biji Pilihan</h4>
+            <p class="text-sm text-warm-900/50 mt-2">Bekerjasama langsung dengan petani lokal dari Toraja hingga Gayo.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-warm-900">Komunitas</h4>
+            <p class="text-sm text-warm-900/50 mt-2">Ruang kolaborasi bagi para kreatif dan pecinta diskusi hangat.</p>
+          </div>
+        </div>
+
+        <div class="mt-12">
+          <p class="font-serif italic text-xl text-warm-900/80">"Di bawah langit senja, setiap tegukan adalah jeda yang kita butuhkan."</p>
+          <p class="mt-4 font-bold text-accent-500">— Founder Kopi Senja</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="promo" class="py-32 bg-warm-100">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-accent-500 font-bold tracking-widest uppercase text-sm">Penawaran Terbatas</span>
+      <h3 class="mt-4 text-4xl md:text-5xl font-serif font-bold text-warm-900">Promo Bulan Ini</h3>
+      <p class="mt-4 text-warm-900/50">Nikmati momen senja dengan harga yang lebih bersahabat.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="relative group overflow-hidden rounded-[2.5rem] bg-white shadow-sm border border-warm-200 flex flex-col md:flex-row">
+        <div class="md:w-1/2 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="h-full w-full object-cover group-hover:scale-110 transition duration-500" />
+        </div>
+        <div class="p-8 md:w-1/2 flex flex-col justify-center">
+          <div class="inline-block w-fit px-3 py-1 bg-accent-500 text-white text-[10px] font-bold rounded-full mb-4 uppercase">Set Hemat</div>
+          <h4 class="text-2xl font-bold text-warm-900 leading-tight">Senja Berdua</h4>
+          <p class="mt-3 text-sm text-warm-900/60 leading-relaxed">2 Senja Latte + 1 Chocolate Brownie untuk teman ngobrolmu.</p>
+          <div class="mt-6 flex items-baseline gap-2">
+            <span class="text-2xl font-bold text-accent-500">65K</span>
+            <span class="text-sm text-warm-900/30 line-through">85K</span>
+          </div>
+          <p class="mt-4 text-[10px] text-warm-900/40 italic">*Berlaku setiap Senin - Kamis</p>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-[2.5rem] bg-white shadow-sm border border-warm-200 flex flex-col md:flex-row">
+        <div class="md:w-1/2 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-full w-full object-cover group-hover:scale-110 transition duration-500" />
+        </div>
+        <div class="p-8 md:w-1/2 flex flex-col justify-center">
+          <div class="inline-block w-fit px-3 py-1 bg-sage text-white text-[10px] font-bold rounded-full mb-4 uppercase">Morning Perk</div>
+          <h4 class="text-2xl font-bold text-warm-900 leading-tight">Early Bird Coffee</h4>
+          <p class="mt-3 text-sm text-warm-900/60 leading-relaxed">Diskon 30% untuk semua varian Espresso Base sebelum jam 10 pagi.</p>
+          <div class="mt-6 flex items-baseline gap-2">
+            <span class="text-2xl font-bold text-accent-500">Disc. 30%</span>
+          </div>
+          <p class="mt-4 text-[10px] text-warm-900/40 italic">*Khusus Dine-in & Takeaway</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="follow" class="py-32 bg-warm-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-accent-500 font-bold tracking-widest uppercase text-sm">Mari Berteman</span>
+      <h3 class="mt-4 text-4xl md:text-5xl font-serif font-bold text-warm-900">Ikuti Jejak Kami</h3>
+      <p class="mt-4 text-warm-900/50">Temukan inspirasi harian dan update terbaru di <a href="#" class="text-accent-500 font-bold hover:underline">@kopisenja.id</a></p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="group relative aspect-square overflow-hidden rounded-3xl bg-warm-200">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-accent-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <button class="bg-white text-accent-600 p-3 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32.03,32.03,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="group relative aspect-square overflow-hidden rounded-3xl bg-warm-200">
+        <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-accent-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <button class="bg-white text-accent-600 p-3 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32.03,32.03,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="group relative aspect-square overflow-hidden rounded-3xl bg-warm-200">
+        <img src="https://plus.unsplash.com/premium_photo-1671088575920-09f2a5970574?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-accent-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <button class="bg-white text-accent-600 p-3 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32.03,32.03,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="group relative aspect-square overflow-hidden rounded-3xl bg-warm-200">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-accent-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <button class="bg-white text-accent-600 p-3 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32.03,32.03,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="#" class="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-accent-500 text-white font-bold hover:bg-accent-600 transition-all shadow-xl shadow-accent-500/20">
+        Follow Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-12 bg-white border-t border-warm-200 text-center">
+  <h2 class="font-serif font-bold text-2xl text-accent-500 mb-4">Kopi Senja</h2>
+  <p class="text-warm-900/40 text-sm">© 2026 Kopi Senja. Diseduh dengan cinta untuk penikmat cerita.</p>
 </footer>
 
 </body>
